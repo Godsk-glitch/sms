@@ -1,0 +1,76 @@
+Q1. Write a php program that prints numbers from 1 to 100, each number in a different paragraph.
+
+?php
+// Prints the number from 1 to 100.
+echo "The numbers from 1 to 100:";
+echo "<br>";
+for( $i=1; $i<=100; $i++ )
+
+{
+
+echo "<p>".$i."</p>";
+
+}
+
+
+?>
+
+</body>
+</html>
+
+
+Q2. Write a php program to print “good morning”, “good afternoon”, “good evening”, and “good night” based upon the current time. Hint: date(‘H’) will give you the present hour (in 24 hr format).
+
+<html>
+<body>
+
+<?php
+// Timezone is Asia/Calcutta
+date_default_timezone_set('Asia/Calcutta');
+
+// 24-hour format of an hour without leading zeros (0 through 23)
+$Hour = date('H');
+
+if ( $Hour >= 4 && $Hour <= 12 ) {
+    echo "Good Morning";
+} else if ( $Hour > 12 && $Hour <= 16 ) {
+    echo "Good Afternoon";
+} else if ( $Hour > 16 || $Hour <= 20 ) {
+    echo "Good Evening";
+}
+else if ( $Hour > 20 || $Hour < 4 ) {
+    echo "Good Night";
+}
+?>
+
+
+</body>
+</html>
+
+Q3. Go through the basics of PHP at w3schools
+https://www.w3schools.com/php/default.asp
+
+Q4. Make 2 HTML forms with sample fields and values. Set one action to GET and another to POST. Download “Live HTTP Headers” addon for firefox and capture the request in both the cases after submitting the form. Analyse where the data from your input fields goes in the request.
+
+<html>
+<head>
+    <title>Forms with GET and POST method</title>
+</head>
+<body>
+<!-- GET Method-->
+<form  action="hello.php" method="GET" target="_blank">
+First Name: <input type="text" name="FirstName" placeholder="Enter First Name "><br><br>
+Password: <input type="password" name="LastName" placeholder="Enter Password"><br><br>
+<input type="submit" value="Submit">
+</form>
+<br><br><br>
+<!-- POST Method-->
+<form  action="hello1.php" method="POST" target="_blank">
+First Name: <input type="text" name="FirstName" placeholder="Enter First Name "><br><br>
+Password: <input type="password" name="LastName" placeholder="Enter Password"><br><br>
+<input type="submit" value="Submit">
+</form>
+
+
+</body>
+</html>
